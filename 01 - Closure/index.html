@@ -22,6 +22,28 @@
 
     plusTen(13); //23 <-- 10 + 13
 
+    function User() {
+        var username;
+        var password;
+
+        //here comes the code for login
+
+        function doLogin(user, pw) {
+            username = user;
+            password = pw;
+        }
+
+        var publicAPI = {
+            login: doLogin
+        };
+
+        return publicAPI;
+    }
+
+    //create an instance of User module
+    var fred = User();
+    fred.login("fred", "12Battery34!");
+
 </script>
 </body>
 </html>
