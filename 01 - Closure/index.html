@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure test</title>
+</head>
+<body>
+<script>
+
+    function makeAdder(x) {
+        function add(y) {
+            return y + x;
+        }
+        return add;
+    }
+
+    var plusOne = makeAdder(1);
+    var plusTen = makeAdder(10);
+
+    plusOne(3); //4 <-- 1 + 3
+    plusOne(41); //42 <-- 1 + 41
+
+    plusTen(13); //23 <-- 10 + 13
+
+</script>
+</body>
+</html>
