@@ -22,10 +22,10 @@ var obj2 = {
     bar: "obj2"
 }
 
-foo();
-obj1.foo();
-foo.call(obj2);
-new foo();
+foo(); //"global" - set this to global object
+obj1.foo(); //"obj1"
+foo.call(obj2); //"obj2"
+new foo(); //undefined
 
 </script>
 </body>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Closure test</title>
+</head>
+<body>
+<script>
+
+var foo = {
+    a: 42
+}
+
+var bar = Object.create(foo);
+bar.b = "Hello world!";
+
+bar.b; //"Hello world!"
+bar.a //42 (delegate to foo)
+
+</script>
+</body>
+</html>
